@@ -2,6 +2,8 @@
 
 [PostCSS] plugin to convert CSS according Accelerated Mobile Pages requirements.
 
+AMP CSS requirements: https://github.com/tinovyatkin/postcss-amp
+
 [PostCSS]: https://github.com/postcss/postcss
 [ci-img]:  https://travis-ci.org/tinovyatkin/postcss-amp.svg
 [ci]:      https://travis-ci.org/tinovyatkin/postcss-amp
