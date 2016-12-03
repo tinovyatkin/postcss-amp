@@ -20,7 +20,7 @@
     "url": "https://github.com/tinovyatkin/postcss-amp/issues"
   },
   "homepage": "https://github.com/tinovyatkin/postcss-amp",
-  "dependencies": {
+  "peerDependencies": {
     "postcss": "^5.2.6"
   },
   "devDependencies": {
