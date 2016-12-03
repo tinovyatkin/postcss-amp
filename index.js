@@ -1,13 +1,33 @@
-var postcss = require('postcss');
+const { plugin } = require('postcss');
 
-module.exports = postcss.plugin('postcss-amp', function (opts) {
-    opts = opts || {};
-
+module.exports = plugin('postcss-amp', () => {
     // Work with options here
 
-    return function (root, result) {
+    return (root) => {
+        // Remove !important
+        root.walkDecls(decl => {
+          	decl.important = false;
+        });
+        // Removes selectors
+        root.walkRules(/\*|:not|\.-amp-|^i-amp|\si-amp/, selector => {
+            selector.parent.removeChild(selector);
+        });
+        // Removing properties
+        root.walkDecls(/behavior|-moz-binding|filter/, decl => {
+            decl.parent.removeChild(decl);
+        });
+        // Restricted styles
 
-        // Transform CSS AST here
-
+        /* transition property
+            Only GPU-accelerated properties (currently opacity,
+            transform and -vendorPrefix-transform). */
+        root.walkDecls(/transition/, decl => {
+            if (!/opacity|transform/.test(decl.value)) {
+                const { parent } = decl;
+                parent.removeChild(decl);
+                // remove whole selector if it empty
+                if (!parent.nodes.length) parent.parent.removeChild(parent);
+            }
+        });
     };
 });

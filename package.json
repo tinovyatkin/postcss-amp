@@ -13,6 +13,7 @@
   "author": "tinovyatkin <tino@vtkn.io>",
   "license": "MIT",
   "repository": "tinovyatkin/postcss-amp",
+  "engines" : { "node" : "^6" },
   "bugs": {
     "url": "https://github.com/tinovyatkin/postcss-amp/issues"
   },
