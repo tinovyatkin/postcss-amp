@@ -1,0 +1,37 @@
+{
+  "name": "postcss-amp",
+  "version": "0.0.0",
+  "description": "PostCSS plugin to convert CSS according Accelerated Mobile Pages requirements",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "amp",
+    "accelerated-mobile-page",
+    "mobile"
+  ],
+  "author": "tinovyatkin <tino@vtkn.io>",
+  "license": "MIT",
+  "repository": "tinovyatkin/postcss-amp",
+  "bugs": {
+    "url": "https://github.com/tinovyatkin/postcss-amp/issues"
+  },
+  "homepage": "https://github.com/tinovyatkin/postcss-amp",
+  "dependencies": {
+    "postcss": "^5.2.6"
+  },
+  "devDependencies": {
+    "jest": "^17.0.2",
+    "eslint": "^3.10.2",
+    "eslint-config-postcss": "^2.0.2"
+  },
+  "scripts": {
+    "test": "jest && eslint *.js"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-postcss/es5",
+    "env": {
+      "jest": true
+    }
+  }
+}
