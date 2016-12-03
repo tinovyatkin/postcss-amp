@@ -40,7 +40,7 @@ it('removes i-amp- tag names selectors', () => {
 
 it('removes behavior, -moz-binding and filter properties', () => {
     return run('a { behavior: none; -moz-binding: inherit; filter: grayscale(50); }',
-                'a { }', {});
+                '', {});
 });
 
 it('removes non-GPU transition', () => {

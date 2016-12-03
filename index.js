@@ -14,7 +14,10 @@ module.exports = plugin('postcss-amp', () => {
         });
         // Removing properties
         root.walkDecls(/behavior|-moz-binding|filter/, decl => {
-            decl.parent.removeChild(decl);
+            const { parent } = decl;
+            parent.removeChild(decl);
+            // remove whole selector if it empty
+            if (!parent.nodes.length) parent.parent.removeChild(parent);
         });
         // Restricted styles
 
