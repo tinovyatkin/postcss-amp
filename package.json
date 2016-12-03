@@ -1,6 +1,6 @@
 {
   "name": "postcss-amp",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "PostCSS plugin to convert CSS according Accelerated Mobile Pages requirements",
   "keywords": [
     "postcss",
@@ -13,7 +13,9 @@
   "author": "tinovyatkin <tino@vtkn.io>",
   "license": "MIT",
   "repository": "tinovyatkin/postcss-amp",
-  "engines" : { "node" : "^6" },
+  "engines": {
+    "node": "^6"
+  },
   "bugs": {
     "url": "https://github.com/tinovyatkin/postcss-amp/issues"
   },
