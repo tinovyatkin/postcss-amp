@@ -1,6 +1,6 @@
 {
   "name": "postcss-amp",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "PostCSS plugin to convert CSS according Accelerated Mobile Pages requirements",
   "keywords": [
     "postcss",
