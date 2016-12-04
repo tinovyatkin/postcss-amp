@@ -1,9 +1,9 @@
 # PostCSS Amp [![NPM version](http://img.shields.io/npm/v/postcss-amp.svg)](https://www.npmjs.org/package/postcss-amp) [![Build Status](https://travis-ci.org/tinovyatkin/postcss-amp.svg?branch=master)](https://travis-ci.org/tinovyatkin/postcss-amp)
 
+> PostCSS plugin to convert CSS according Accelerated Mobile Pages requirements [![amp-logo](https://www.ampproject.org/static/img/logo-blue.svg)].
 
-> [PostCSS] plugin to convert CSS according Accelerated Mobile Pages requirements ![amp-logo](https://www.ampproject.org/static/img/logo-blue.svg).
 
-AMP CSS requirements: https://github.com/tinovyatkin/postcss-amp
+AMP CSS requirements: <https://github.com/tinovyatkin/postcss-amp>
 
 ```css
 .foo * {
@@ -32,4 +32,4 @@ i-amp-el {
 postcss([ require('postcss-amp') ])
 ```
 
-See [PostCSS] docs for examples for your environment.
+See PostCSS docs for examples for your environment.
