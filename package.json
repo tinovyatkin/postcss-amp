@@ -30,11 +30,12 @@
     "postcss": "^5.2.6"
   },
   "devDependencies": {
-    "postcss": "^5.2.6",
-    "jest": "^17.0.2",
     "eslint": "^3.10.2",
     "eslint-config-postcss": "^2.0.2",
+    "eslint-plugin-jest": "^1.0.0",
+    "jest": "^17.0.2",
     "npmpub": "^3.0.1",
+    "postcss": "^5.2.6",
     "remark-cli": "^2.0.0",
     "remark-preset-lint-consistent": "^1.0.0",
     "remark-preset-lint-recommended": "^1.0.0"
@@ -44,7 +45,14 @@
     "test": "jest && eslint *.js --ignore-path .gitignore && remark . --quiet --frail"
   },
   "eslintConfig": {
+    "plugins": [
+      "jest"
+    ],
     "extends": "eslint-config-postcss/es5",
+    "rules": {
+      "jest/no-exclusive-tests": 2,
+      "jest/no-identical-title": 2
+    },
     "env": {
       "jest": true
     }
