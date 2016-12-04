@@ -15,7 +15,10 @@
   ],
   "author": "tinovyatkin <tino@vtkn.io>",
   "license": "MIT",
-  "repository": "tinovyatkin/postcss-amp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tinovyatkin/postcss-amp.git"
+  },
   "engines": {
     "node": "^6"
   },
