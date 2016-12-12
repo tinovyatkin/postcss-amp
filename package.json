@@ -20,7 +20,7 @@
     "url": "git+https://github.com/tinovyatkin/postcss-amp.git"
   },
   "engines": {
-    "node": "^6"
+    "node": "^6.0.0"
   },
   "bugs": {
     "url": "https://github.com/tinovyatkin/postcss-amp/issues"
