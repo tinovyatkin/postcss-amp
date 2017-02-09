@@ -1,5 +1,7 @@
 # PostCSS Amp [![NPM version](http://img.shields.io/npm/v/postcss-amp.svg)](https://www.npmjs.org/package/postcss-amp) [![Build Status](https://travis-ci.org/tinovyatkin/postcss-amp.svg?branch=master)](https://travis-ci.org/tinovyatkin/postcss-amp)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tinovyatkin/postcss-amp.svg)](https://greenkeeper.io/)
+
 > PostCSS plugin to convert CSS according Accelerated Mobile Pages requirements [![amp-logo](https://www.ampproject.org/static/img/logo-blue.svg)].
 
 
