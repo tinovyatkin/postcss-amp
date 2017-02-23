@@ -33,7 +33,7 @@
     "eslint": "^3.15.0",
     "eslint-config-postcss": "^2.0.2",
     "eslint-plugin-jest": "^1.0.2",
-    "jest": "^18.1.0",
+    "jest": "^19.0.2",
     "npmpub": "^3.1.0",
     "postcss": "^5.2.12",
     "remark-cli": "^2.1.0",
