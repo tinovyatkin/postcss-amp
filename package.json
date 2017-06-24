@@ -30,7 +30,7 @@
     "postcss": "^5.2.12"
   },
   "devDependencies": {
-    "eslint": "^3.15.0",
+    "eslint": "^4.1.0",
     "eslint-config-postcss": "^2.0.2",
     "eslint-plugin-jest": "^19.0.1",
     "jest": "^19.0.2",
