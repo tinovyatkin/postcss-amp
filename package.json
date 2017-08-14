@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/tinovyatkin/postcss-amp",
   "peerDependencies": {
-    "postcss": "^5.2.12"
+    "postcss": "^6.0.0"
   },
   "devDependencies": {
     "eslint": "^3.15.0",
