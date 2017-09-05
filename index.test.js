@@ -17,16 +17,6 @@ it('removes !important', () => {
     return run('a { color: red !important; }', 'a { color: red; }', {});
 });
 
-/* Removes universal selectors */
-it('removes universal selectors', () => {
-    return run('a * { color: red; }', '', {});
-});
-
-/* Removes universal selectors */
-it('removes :not selectors', () => {
-    return run('b:not(:hover) { color: red; }', '', {});
-});
-
 /* Removes -amp- classes selectors */
 it('removes -amp- classes selectors', () => {
     return run('test .-amp-cozel { color: red; }', '', {});

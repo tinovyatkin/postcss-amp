@@ -1,3 +1,5 @@
+'use strict';
+
 const { plugin } = require('postcss');
 
 module.exports = plugin('postcss-amp', () => {
@@ -9,7 +11,7 @@ module.exports = plugin('postcss-amp', () => {
           	decl.important = false;
         });
         // Removes selectors
-        root.walkRules(/\*|:not|\.-amp-|^i-amp|\si-amp/, selector => {
+        root.walkRules(/\.-amp-|^i-amp|\si-amp/, selector => {
             selector.parent.removeChild(selector);
         });
         // Removing properties
