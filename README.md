@@ -8,10 +8,6 @@
 AMP CSS requirements: <https://github.com/tinovyatkin/postcss-amp>
 
 ```css
-.foo * {
-    /* universal selector is banned in AMP */
-    color: red;
-}
 i-amp-el {
     /* elements starting with i-amp- are banned
 }
