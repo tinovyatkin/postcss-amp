@@ -35,15 +35,15 @@ it('removes -amp- classes selectors', () => {
 /* Removes i-amp- tag names selectors */
 it('removes i-amp- tag names selectors', () => {
     return run('.test i-amp-cozel { color: red; };i-amp-dd { color: green; }',
-                '', {});
+        '', {});
 });
 
 it('removes behavior, -moz-binding and filter properties', () => {
     return run('a { behavior: none; -moz-binding: inherit; filter: grayscale(50); }',
-                '', {});
+        '', {});
 });
 
 it('removes non-GPU transition', () => {
     return run('a { transition: opacity(.5); }; b { transition: skew(.5) };',
-                'a { transition: opacity(.5); };', {});
+        'a { transition: opacity(.5); };', {});
 });
