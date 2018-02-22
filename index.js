@@ -34,5 +34,21 @@ module.exports = plugin('postcss-amp', () => {
                 if (!parent.nodes.length) parent.parent.removeChild(parent);
             }
         });
+
+        // Remove disallowed at-rules
+        const disallowedAtRules = new Set([
+            'charset',
+            'import',
+            'namespace',
+            'supports',
+            'document',
+            'page',
+            'viewport'
+        ]);
+        root.walkAtRules(rule => {
+            if (disallowedAtRules.has(rule.name)) {
+                rule.remove();
+            }
+        });
     };
 });

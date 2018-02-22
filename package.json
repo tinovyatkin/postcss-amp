@@ -53,7 +53,8 @@
       "jest/no-identical-title": 2
     },
     "env": {
-      "jest": true
+      "jest": true,
+      "es6": true
     }
   },
   "remarkConfig": {
