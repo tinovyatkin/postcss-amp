@@ -11,7 +11,8 @@
     "mobile"
   ],
   "files": [
-    "index.js"
+    "index.js",
+    "at-rules.js"
   ],
   "author": "tinovyatkin <tino@vtkn.io>",
   "license": "MIT",
