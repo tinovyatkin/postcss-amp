@@ -29,3 +29,7 @@ it('removes @page', () => {
 it('removes @viewport', () => {
     return run('@viewport { width: device-width; }', '', {});
 });
+
+it('removes @-ms-viewport', () => {
+    return run('@-ms-viewport { width: device-width; }', '', {});
+});
