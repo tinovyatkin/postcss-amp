@@ -1,6 +1,7 @@
 'use strict';
 
 const { plugin } = require('postcss');
+const removeDisallowedAtRules = require('./at-rules');
 
 module.exports = plugin('postcss-amp', () => {
     // Work with options here
@@ -34,5 +35,8 @@ module.exports = plugin('postcss-amp', () => {
                 if (!parent.nodes.length) parent.parent.removeChild(parent);
             }
         });
+
+        // Remove disallowed at-rules
+        removeDisallowedAtRules(root);
     };
 });
