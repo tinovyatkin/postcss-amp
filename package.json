@@ -63,7 +63,10 @@
       "jest/expect-expect": [
         "error",
         {
-          "assertFunctionNames": ["expect", "run"]
+          "assertFunctionNames": [
+            "expect",
+            "run"
+          ]
         }
       ]
     },
