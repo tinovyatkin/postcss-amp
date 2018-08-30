@@ -59,7 +59,13 @@
     ],
     "extends": "eslint-config-postcss",
     "rules": {
-      "jest/no-identical-title": 2
+      "jest/no-identical-title": 2,
+      "jest/expect-expect": [
+        "error",
+        {
+          "assertFunctionNames": ["expect", "run"]
+        }
+      ]
     },
     "env": {
       "jest": true,
