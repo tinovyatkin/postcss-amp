@@ -1,6 +1,7 @@
 'use strict'
 
 const { plugin } = require('postcss')
+
 const removeDisallowedAtRules = require('./at-rules')
 
 module.exports = plugin('postcss-amp', () => {
