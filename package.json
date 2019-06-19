@@ -45,7 +45,7 @@
     "eslint-plugin-security": "1.4.0",
     "eslint-plugin-standard": "4.0.0",
     "jest": "24.8.0",
-    "postcss": "7.0.2"
+    "postcss": "7.0.17"
   },
   "scripts": {
     "test": "jest && eslint *.js --ignore-path .gitignore"
