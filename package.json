@@ -1,5 +1,5 @@
 {
-  "name": "postcss-amp",
+  "name": "postcss-amp-tt-fork",
   "version": "1.4.0",
   "description": "PostCSS plugin to convert CSS according Accelerated Mobile Pages requirements",
   "keywords": [
