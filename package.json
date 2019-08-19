@@ -31,7 +31,7 @@
     "postcss": ">=7"
   },
   "devDependencies": {
-    "@logux/eslint-config": "28.2.3",
+    "@logux/eslint-config": "30.0.2",
     "@types/jest": "24.0.18",
     "eslint": "6.2.0",
     "eslint-config-postcss": "3.0.7",
