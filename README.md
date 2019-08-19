@@ -1,10 +1,16 @@
 # PostCSS Amp [![NPM version](http://img.shields.io/npm/v/postcss-amp.svg)](https://www.npmjs.org/package/postcss-amp) [![Build Status](https://travis-ci.org/tinovyatkin/postcss-amp.svg?branch=master)](https://travis-ci.org/tinovyatkin/postcss-amp)
 
 
-> PostCSS plugin to convert CSS according Accelerated Mobile Pages requirements [![amp-logo](https://www.ampproject.org/static/img/logo-blue.svg)].
+> PostCSS plugin to convert CSS according Accelerated Mobile Pages requirements.
+
+<img src="https://status.ampproject.org/static/img/logo-blue.svg" style="float: left; margin-right: 20px" />
+
+AMP CSS requirements: <https://amp.dev/documentation/guides-and-tutorials/develop/style_and_layout/style_pages/>
+
+<hr/>
 
 
-AMP CSS requirements: <https://github.com/tinovyatkin/postcss-amp>
+Input:
 
 ```css
 i-amp-el {
@@ -15,6 +21,8 @@ i-amp-el {
     color: red !important; /* important is banned */
 }
 ```
+
+Output:
 
 ```css
 .boo {
