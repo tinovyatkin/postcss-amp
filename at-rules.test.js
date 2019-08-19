@@ -14,10 +14,6 @@ it('removes @namespace', () => {
   return run('@namespace url(http://www.w3.org/1999/xhtml);', '', {});
 });
 
-it('removes @supports', () => {
-  return run('@supports (display: grid) { div { display: grid; } }', '', {});
-});
-
 it('removes @document', () => {
   return run(
     '@document url("https://www.example.com/") { h1 { color: green; } }',
@@ -25,11 +21,6 @@ it('removes @document', () => {
     {}
   );
 });
-
-it('removes @page', () => {
-  return run('@page { size: a3; }', '', {});
-});
-
 it('removes @viewport', () => {
   return run('@viewport { width: device-width; }', '', {});
 });

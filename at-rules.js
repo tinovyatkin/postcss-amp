@@ -6,9 +6,7 @@ const disallowedAtRules = new Set([
   'charset',
   'import',
   'namespace',
-  'supports',
   'document',
-  'page',
   'viewport',
   '-ms-viewport'
 ]);
