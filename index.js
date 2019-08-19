@@ -1,8 +1,8 @@
-'use strict'
+'use strict';
 
-const { plugin } = require('postcss')
+const { plugin } = require('postcss');
 
-const removeDisallowedAtRules = require('./at-rules')
+const removeDisallowedAtRules = require('./at-rules');
 
 module.exports = plugin('postcss-amp', () => {
   // Work with options here
@@ -10,19 +10,19 @@ module.exports = plugin('postcss-amp', () => {
   return root => {
     // Remove !important
     root.walkDecls(decl => {
-      decl.important = false
-    })
+      decl.important = false;
+    });
     // Removes selectors
     root.walkRules(/\.-amp-|^i-amp|\si-amp/, selector => {
-      selector.parent.removeChild(selector)
-    })
+      selector.parent.removeChild(selector);
+    });
     // Removing properties
     root.walkDecls(/behavior|-moz-binding|filter/, decl => {
-      let { parent } = decl
-      parent.removeChild(decl)
+      let { parent } = decl;
+      parent.removeChild(decl);
       // remove whole selector if it empty
-      if (!parent.nodes.length) parent.parent.removeChild(parent)
-    })
+      if (!parent.nodes.length) parent.parent.removeChild(parent);
+    });
     // Restricted styles
 
     /* transition property
@@ -30,14 +30,14 @@ module.exports = plugin('postcss-amp', () => {
             transform and -vendorPrefix-transform). */
     root.walkDecls(/transition/, decl => {
       if (!/opacity|transform/.test(decl.value)) {
-        let { parent } = decl
-        parent.removeChild(decl)
+        let { parent } = decl;
+        parent.removeChild(decl);
         // remove whole selector if it empty
-        if (!parent.nodes.length) parent.parent.removeChild(parent)
+        if (!parent.nodes.length) parent.parent.removeChild(parent);
       }
-    })
+    });
 
     // Remove disallowed at-rules
-    removeDisallowedAtRules(root)
-  }
-})
+    removeDisallowedAtRules(root);
+  };
+});

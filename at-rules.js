@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 // See https://www.ampproject.org/docs/reference/validation_errors
 
@@ -11,14 +11,14 @@ const disallowedAtRules = new Set([
   'page',
   'viewport',
   '-ms-viewport'
-])
+]);
 
-function removeDisallowedAtRules (root) {
+function removeDisallowedAtRules(root) {
   root.walkAtRules(rule => {
     if (disallowedAtRules.has(rule.name)) {
-      rule.remove()
+      rule.remove();
     }
-  })
+  });
 }
 
-module.exports = removeDisallowedAtRules
+module.exports = removeDisallowedAtRules;
