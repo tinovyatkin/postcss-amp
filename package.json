@@ -21,7 +21,7 @@
     "url": "git+https://github.com/tinovyatkin/postcss-amp.git"
   },
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=8.0.0"
   },
   "bugs": {
     "url": "https://github.com/tinovyatkin/postcss-amp/issues"
@@ -31,42 +31,29 @@
     "postcss": ">=7"
   },
   "devDependencies": {
-    "@logux/eslint-config": "30.0.2",
     "@types/jest": "24.0.18",
     "eslint": "6.2.0",
-    "eslint-config-postcss": "3.0.7",
-    "eslint-config-standard": "14.0.0",
-    "eslint-plugin-import": "2.18.2",
-    "eslint-plugin-import-helpers": "1.0.2",
-    "eslint-plugin-jest": "22.15.1",
+    "eslint-config-prettier": "6.1.0",
     "eslint-plugin-node": "9.1.0",
-    "eslint-plugin-prefer-let": "1.0.1",
-    "eslint-plugin-promise": "4.2.1",
-    "eslint-plugin-security": "1.4.0",
-    "eslint-plugin-standard": "4.0.1",
+    "eslint-plugin-prettier": "3.1.0",
     "jest": "24.9.0",
-    "postcss": "7.0.17"
+    "postcss": "7.0.17",
+    "prettier": "1.18.2"
   },
   "scripts": {
+    "lint": "eslint *.js --ignore-path .gitignore",
     "test": "jest && eslint *.js --ignore-path .gitignore"
   },
   "eslintConfig": {
     "plugins": [
-      "jest"
+      "prettier",
+      "node"
     ],
-    "extends": "eslint-config-postcss",
-    "rules": {
-      "jest/no-identical-title": 2,
-      "jest/expect-expect": [
-        "error",
-        {
-          "assertFunctionNames": [
-            "expect",
-            "run"
-          ]
-        }
-      ]
-    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:prettier/recommended",
+      "plugin:node/recommended"
+    ],
     "env": {
       "jest": true,
       "es6": true
