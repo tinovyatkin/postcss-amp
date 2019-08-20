@@ -57,6 +57,10 @@
     "env": {
       "jest": true,
       "es6": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "script"
     }
   }
 }
