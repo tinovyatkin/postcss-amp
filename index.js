@@ -17,7 +17,7 @@ module.exports = plugin('postcss-amp', () => {
       selector.parent.removeChild(selector);
     });
     // Removing properties
-    root.walkDecls(/behavior|-moz-binding|filter/, decl => {
+    root.walkDecls(/behavior|-moz-binding/, decl => {
       let { parent } = decl;
       parent.removeChild(decl);
       // remove whole selector if it empty

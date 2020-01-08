@@ -17,7 +17,7 @@ i-amp-el {
     /* elements starting with i-amp- are banned
 }
 .boo {
-    filter: gray(.5); /* filter is banned */
+    transition: height 0.5s; /* non-GPU-accelerated transition properties are banned */
     color: red !important; /* important is banned */
 }
 ```
