@@ -7,17 +7,17 @@ const removeDisallowedAtRules = require('./at-rules');
 module.exports = plugin('postcss-amp', () => {
   // Work with options here
 
-  return root => {
+  return (root) => {
     // Remove !important
-    root.walkDecls(decl => {
+    root.walkDecls((decl) => {
       decl.important = false;
     });
     // Removes selectors
-    root.walkRules(/\.-amp-|^i-amp|\si-amp/, selector => {
+    root.walkRules(/\.-amp-|^i-amp|\si-amp/, (selector) => {
       selector.parent.removeChild(selector);
     });
     // Removing properties
-    root.walkDecls(/behavior|-moz-binding/, decl => {
+    root.walkDecls(/behavior|-moz-binding/, (decl) => {
       let { parent } = decl;
       parent.removeChild(decl);
       // remove whole selector if it empty
@@ -28,7 +28,7 @@ module.exports = plugin('postcss-amp', () => {
     /* transition property
             Only GPU-accelerated properties (currently opacity,
             transform and -vendorPrefix-transform). */
-    root.walkDecls(/transition/, decl => {
+    root.walkDecls(/transition/, (decl) => {
       if (!/opacity|transform/.test(decl.value)) {
         let { parent } = decl;
         parent.removeChild(decl);

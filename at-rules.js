@@ -8,11 +8,11 @@ const disallowedAtRules = new Set([
   'namespace',
   'document',
   'viewport',
-  '-ms-viewport'
+  '-ms-viewport',
 ]);
 
 function removeDisallowedAtRules(root) {
-  root.walkAtRules(rule => {
+  root.walkAtRules((rule) => {
     if (disallowedAtRules.has(rule.name)) {
       rule.remove();
     }
