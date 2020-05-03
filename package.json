@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@types/jest": "25.2.1",
-    "eslint": "6.8.0",
+    "eslint": "7.0.0-rc.0",
     "eslint-config-prettier": "6.11.0",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "3.1.3",
@@ -43,24 +43,5 @@
   "scripts": {
     "lint": "eslint *.js --ignore-path .gitignore",
     "test": "jest && eslint *.js --ignore-path .gitignore"
-  },
-  "eslintConfig": {
-    "plugins": [
-      "prettier",
-      "node"
-    ],
-    "extends": [
-      "eslint:recommended",
-      "plugin:prettier/recommended",
-      "plugin:node/recommended"
-    ],
-    "env": {
-      "jest": true,
-      "es6": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 2018,
-      "sourceType": "script"
-    }
   }
 }
