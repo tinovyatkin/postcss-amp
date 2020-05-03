@@ -20,4 +20,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
-      - run: npx jest
+      - run: npx jest --coverage --colors
+
+      - uses: codecov/codecov-action@v1
+        with:
+          file: ./coverage/coverage-final.json
