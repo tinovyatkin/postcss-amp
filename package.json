@@ -38,7 +38,7 @@
     "eslint-plugin-prettier": "3.1.2",
     "jest": "25.5.4",
     "postcss": "7.0.28",
-    "prettier": "1.19.1"
+    "prettier": "2.0.5"
   },
   "scripts": {
     "lint": "eslint *.js --ignore-path .gitignore",
