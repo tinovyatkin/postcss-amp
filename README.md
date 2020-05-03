@@ -1,5 +1,4 @@
-# PostCSS Amp [![NPM version](http://img.shields.io/npm/v/postcss-amp.svg)](https://www.npmjs.org/package/postcss-amp) [![Build Status](https://travis-ci.org/tinovyatkin/postcss-amp.svg?branch=master)](https://travis-ci.org/tinovyatkin/postcss-amp)
-
+# PostCSS Amp [![NPM version](http://img.shields.io/npm/v/postcss-amp.svg)](https://www.npmjs.org/package/postcss-amp) [![codecov](https://codecov.io/gh/tinovyatkin/postcss-amp/branch/master/graph/badge.svg)](https://codecov.io/gh/tinovyatkin/postcss-amp)
 
 > PostCSS plugin to convert CSS according Accelerated Mobile Pages requirements.
 
@@ -9,16 +8,15 @@ AMP CSS requirements: <https://amp.dev/documentation/guides-and-tutorials/develo
 
 <hr/>
 
-
 Input:
 
 ```css
 i-amp-el {
-    /* elements starting with i-amp- are banned
+  /* elements starting with i-amp- are banned
 }
 .boo {
     transition: height 0.5s; /* non-GPU-accelerated transition properties are banned */
-    color: red !important; /* important is banned */
+  color: red !important; /* important is banned */
 }
 ```
 
@@ -34,7 +32,7 @@ Output:
 ## Usage
 
 ```js
-postcss([ require('postcss-amp') ])
+postcss([require('postcss-amp')]);
 ```
 
 See PostCSS docs for examples for your environment.
