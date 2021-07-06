@@ -31,7 +31,7 @@
     "postcss": ">=7"
   },
   "devDependencies": {
-    "@types/jest": "26.0.8",
+    "@types/jest": "26.0.24",
     "eslint": "7.6.0",
     "eslint-config-prettier": "6.11.0",
     "eslint-plugin-node": "11.1.0",
